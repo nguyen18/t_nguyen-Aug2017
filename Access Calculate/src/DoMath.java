@@ -5,6 +5,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
+// prints method calls
 		System.out.println(Calculate.square(5));
 		System.out.println(Calculate.cube(2));
 		System.out.println(Calculate.average(2, 3));

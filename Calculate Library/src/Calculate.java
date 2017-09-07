@@ -10,41 +10,50 @@ public class Calculate {
 		return operand * operand;
 		
 	}
-	
+
+/* this method takes in an integer and returns its cube */
 	public static int cube(int operand2) {
 		return operand2 * operand2 * operand2;
 		
 	}
-	
+
+// this method find the average of two numbers
 	public static double average(double number01, double number02) {
 		return (number01 + number02)/2;
 }
-	
+
+// this method finds the average of three numbers
 	public static double average(double number1, double number2, double number3 ) {
 		return (number1 + number2 + number3)/3;
 		
 	}
-	
+
+// this method converts radians into degrees
 	public static double toDegrees(double angleRadians) {
 		return angleRadians * (180/3.14159);
 	}
 	
+// this method converts degrees into radians	
 	public static double toRadians(double angleDegrees) {
 		return angleDegrees * (3.14159/180);
 	}
-	
+
+// this method finds the discriminant of 3 numbers
 	public static double discriminant(double a, double b, double c) {
 	    return (b * b) - (4 * a * c);
 	  }
  
+// this method finds an improper fraction of a mixed number
 	public static String toImproperFrac(int sideNumber, int topNumber, int bottomNumber) {
 		 return ((sideNumber * bottomNumber) + topNumber) + "/" + (bottomNumber);
 	}
-	
+
+// this method finds a mixed number from an improper fraction
 	public static String toMixedNum(int top, int bottom) {
 		return (top / bottom) + "_" + (top % bottom) + "/" + bottom;
 	}
-	
+
+// this method foils (ax + b)(cx + d) into ax^2 + bx + c form (quadratic equation)
 	public static String foil(int num1, int num2, int num3, int num4, String v) {
 		return (num1 * num3) + v + "^2 + " + ((num1 * num4) + (num2 * num3)) + v + " + " + (num2 * num4); 
 	}
