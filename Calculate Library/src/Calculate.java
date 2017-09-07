@@ -5,7 +5,7 @@
 */
 public class Calculate {
 	
-/* this method thanks an integer and returns its square */
+/* this method takes an integer and returns its square */
 	public static int square(int operand) {
 		return operand * operand;
 		
@@ -33,5 +33,19 @@ public class Calculate {
 		return angleDegrees * (3.14159/180);
 	}
 	
+	public static double discriminant(double a, double b, double c) {
+	    return (b * b) - (4 * a * c);
+	  }
  
+	public static String toImproperFrac(int sideNumber, int topNumber, int bottomNumber) {
+		 return ((sideNumber * bottomNumber) + topNumber) + "/" + (bottomNumber);
+	}
+	
+	public static String toMixedNum(int top, int bottom) {
+		return (top / bottom) + "_" + (top % bottom) + "/" + bottom;
+	}
+	
+	public static String foil(int num1, int num2, int num3, int num4, String v) {
+		return (num1 * num3) + v + "^2 + " + ((num1 * num4) + (num2 * num3)) + v + " + " + (num2 * num4); 
+	}
 }
