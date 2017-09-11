@@ -109,7 +109,9 @@ public class Calculate {
 	}
 // this method a double to 2 decimal points and returns a double
 	public static double round2(double num1) {
-		return (num1 * 100.0) / 100.0;
+		num1 = (num1 * 100);
+		num1 = (int)num1;
+		return num1/100;
 	}
 }
 		
