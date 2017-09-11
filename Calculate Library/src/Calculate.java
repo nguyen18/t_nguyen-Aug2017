@@ -57,4 +57,61 @@ public class Calculate {
 	public static String foil(int num1, int num2, int num3, int num4, String v) {
 		return (num1 * num3) + v + "^2 + " + ((num1 * num4) + (num2 * num3)) + v + " + " + (num2 * num4); 
 	}
+	
+// this method determines if two integers are divisible by each other
+	public static boolean isDivisibleBy(int num, int num02) {
+		if(num % num02 == 0) {
+			return true;
+	} else {
+		return false;
+			
+	}
+	}
+
+// this method returns the absolute number of a value
+	public static double absValue(double origNum) {
+		if(origNum < 0) {
+			return origNum * -1;
+		} else {
+			return origNum;
+		}
+		}
+// this method returns the larger value out of two numbers
+	public static double max(double num1, double num2) {
+		if(num1 > num2) {
+			return num1;
+		} else {
+			return num2;
+		}
+	}
+//this method returns the larger value out of three numbers
+	public static double max(double num1, double num2, double num3) {
+		if(num1 > num2) {
+			if(num1 > num3) {
+				return num1;
+		}
+		}
+		
+			if(num2 > num3) {
+				return num2; 
+		} else {
+				return num3;
+			}
+	}
+
+// this method returns the lesser value of two integers 
+	public static int min(int num1, int num2) {
+		if(num1 < num2) {
+			return num1;
+		} else {
+			return num2;
+		}
+	}
+// this method a double to 2 decimal points and returns a double
+	public static double round2(double num1) {
+		return (num1 * 100.0) / 100.0;
+	}
 }
+		
+
+
