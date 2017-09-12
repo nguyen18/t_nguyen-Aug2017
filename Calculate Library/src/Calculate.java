@@ -113,6 +113,11 @@ public class Calculate {
 		num1 = (int)num1;
 		return num1/100;
 	}
+	
+// this method accepts a double and an integer and returns a double (exponents)
+	public static double exponent(double operand, int operand2) {
+		for(double )
+	}
 }
 		
 
