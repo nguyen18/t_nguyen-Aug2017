@@ -109,9 +109,18 @@ public class Calculate {
 	}
 // this method a double to 2 decimal points and returns a double
 	public static double round2(double num1) {
-		num1 = (num1 * 100);
-		num1 = (int)num1;
-		return num1/100;
+		double result = 0.0;
+		
+		int tempInt = (int)(num1 * 1000);
+		int roundNum = tempInt % 10;
+		tempInt = tempInt / 10;
+		if(roundNum >= 5 && tempInt < 0) {
+			tempInt++;
+		} else if(roundNum <= -5 && tempInt < 0) {
+			tempInt--;
+		}
+		result = tempInt / 100.0;
+		return result;
 	}
 	
 // this method accepts a double and an integer and returns a double (exponents)
@@ -156,6 +165,7 @@ public class Calculate {
 
 //this method calls another method to help figure out the greatest common factor between two integers
 	public static int gcf(int num1, int num2) {
+		
 		
 	}
 }
