@@ -127,6 +127,9 @@ public class Calculate {
 	
 //this method accepts integer and mutltiplies it by its factoral
 	public static int factorial(int num) {
+		if(num <=2) {
+			return num;
+		}
 		int totalNum = num * (num - 1); 
 		int num2 = num;
 		num2 = num2 - 2;
@@ -140,9 +143,21 @@ public class Calculate {
 
 //this method calls another method to help figure out if a number is prime
 	public static boolean isPrime(int num1) {
-		return isDivisibleBy(num1, 2);
+		if(num1 == 2) {
+			return true;
+		}
+			if(isDivisibleBy(num1, 2) == true) {
+	
+			return false; 
+		}else {
+			return true;
+		}
 	}
 
+//this method calls another method to help figure out the greatest common factor between two integers
+	public static int gcf(int num1, int num2) {
+		
+	}
 }
 
 
