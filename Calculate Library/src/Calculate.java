@@ -124,6 +124,19 @@ public class Calculate {
 		}
 		return operand3;
 	}
+	
+//this method accepts integer and mutltiplies it by its factoral
+	public static int factorial(int num) {
+		int totalNum = num * (num - 1); 
+		int num2 = num;
+		num2 = num2 - 2;
+		while(num2 > 0) {
+			totalNum = totalNum * num2;
+			num2 --;
+			
+		}
+		return totalNum;
+	}
 }
 
 
