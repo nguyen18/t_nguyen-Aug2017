@@ -116,9 +116,14 @@ public class Calculate {
 	
 // this method accepts a double and an integer and returns a double (exponents)
 	public static double exponent(double operand, int operand2) {
-		for(double )
+		double operand3 = operand * operand;
+		operand2 = operand2 - 3;
+		while(operand2 >= 0) {
+			operand3 = operand3 * operand;
+			operand2 --;
+		}
+		return operand3;
 	}
 }
-		
 
 
