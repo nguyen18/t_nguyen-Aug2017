@@ -137,6 +137,12 @@ public class Calculate {
 		}
 		return totalNum;
 	}
+
+//this method calls another method to help figure out if a number is prime
+	public static boolean isPrime(int num1) {
+		return isDivisibleBy(num1, 2);
+	}
+
 }
 
 
