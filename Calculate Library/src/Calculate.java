@@ -156,7 +156,6 @@ public class Calculate {
 			return true;
 		}
 			if(isDivisibleBy(num1, 2) == true) {
-	
 			return false; 
 		}else {
 			return true;
@@ -166,6 +165,7 @@ public class Calculate {
 //this method calls another method to help figure out the greatest common factor between two integers
 	public static int gcf(int num1, int num2) {
 		
+		min(num1, num2);
 		
 		
 	}
