@@ -167,6 +167,7 @@ public class Calculate {
 	public static int gcf(int num1, int num2) {
 		
 		
+		
 	}
 }
 
