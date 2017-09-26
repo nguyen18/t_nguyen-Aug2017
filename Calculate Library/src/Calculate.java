@@ -140,8 +140,8 @@ public class Calculate {
 			return num;
 		}
 		int totalNum = num * (num - 1); 
-		int num2 = num;
-		num2 = num2 - 2;
+		int num2;
+		num2 = num - 2;
 		while(num2 > 0) {
 			totalNum = totalNum * num2;
 			num2 --;
@@ -164,11 +164,29 @@ public class Calculate {
 
 //this method calls another method to help figure out the greatest common factor between two integers
 	public static int gcf(int num1, int num2) {
-		
-		min(num1, num2);
-		
+		int gcf = 0;
+		for(int i = 1; i <= num1 && i <= num2; i++) {
+			if((isDivisibleBy(num1, i) == true) && (isDivisibleBy(num2, i)) == true) {
+				gcf = i;
+			}
+		}
+		return gcf;
 		
 	}
+//this method finds the square root
+	public static double sqrt(double n) {
+		double equation = (0.5) * (n/5 + 5);
+		double answer = equation;
+		for (answer = equation;answer * answer == n; answer += 0) {
+			equation = (0.5) * (n/answer + answer);
+			
+		}
+		double a = round2(equation);
+		return a;
+		
 }
+	
+}
+
 
 
