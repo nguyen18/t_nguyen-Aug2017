@@ -183,7 +183,6 @@ public class Calculate {
 		}
 		double a = round2(equation);
 		return a;
-		
 }
 	
 }
