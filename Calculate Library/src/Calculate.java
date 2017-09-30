@@ -60,6 +60,9 @@ public class Calculate {
 	
 // this method determines if two integers are divisible by each other
 	public static boolean isDivisibleBy(int num, int num02) {
+		if(num02 <= 0) {
+			throw new IllegalArgumentException("second number must be bigger than 0");
+		}
 		if(num % num02 == 0) {
 			return true;
 	} else {
@@ -69,11 +72,11 @@ public class Calculate {
 	}
 
 // this method returns the absolute number of a value
-	public static double absValue(double origNum) {
-		if(origNum < 0) {
-			return origNum * -1;
+	public static double absValue(double num) {
+		if(num < 0) {
+			return num * -1;
 		} else {
-			return origNum;
+			return num;
 		}
 		}
 // this method returns the larger value out of two numbers
@@ -125,6 +128,9 @@ public class Calculate {
 	
 // this method accepts a double and an integer and returns a double (exponents)
 	public static double exponent(double operand, int operand2) {
+		if (operand2 < 0) {
+			throw new IllegalArgumentException("second number must be bigger than 0");
+		}
 		double operand3 = operand * operand;
 		operand2 = operand2 - 3;
 		while(operand2 >= 0) {
@@ -134,9 +140,12 @@ public class Calculate {
 		return operand3;
 	}
 	
-//this method accepts integer and mutltiplies it by its factoral
+//this method accepts integer and multiplies it by its factorial
 	public static int factorial(int num) {
-		if(num <=2) {
+		if(num < 0) {
+			throw new IllegalArgumentException("the number must be bigger than 0");
+		}
+			if(num <=2 && num >= 0) {
 			return num;
 		}
 		int totalNum = num * (num - 1); 
@@ -148,6 +157,7 @@ public class Calculate {
 			
 		}
 		return totalNum;
+		
 	}
 
 //this method calls another method to help figure out if a number is prime
@@ -174,16 +184,46 @@ public class Calculate {
 		
 	}
 //this method finds the square root
-	public static double sqrt(double n) {
-		double equation = (0.5) * (n/5 + 5);
-		double answer = equation;
-		for (answer = equation;answer * answer == n; answer += 0) {
-			equation = (0.5) * (n/answer + answer);
-			
+	public static double sqrt(double num) {
+		if (num <= 0) {
+			throw new IllegalArgumentException("number must be bigger than 0");
 		}
-		double a = round2(equation);
-		return a;
+		double root = 0;
+		while (root * root > (num + 0.01) || root * root < (num - 0.01)) {
+			while (root * root < num) {
+				root = root + 0.001;
+			}
+			while (root * root > num) {
+				root = root - 0.001;
+			}
+		}
+		root = Calculate.round2(root);
+		return root;
+		
 }
+// finds real roots of quadratic equation using quadratic formula
+	public static String quadForm(int a, int b, int c){
+		if (Calculate.discriminant(a,b,c) < 0){
+			throw new IllegalArgumentException("no real roots");
+
+		}
+		
+		if (Calculate.discriminant(a,b,c) == 0){
+			 String roots = Calculate.round2(-b /(2*a)) + " ";
+			 return roots;
+		}
+		
+		else {
+			double root1 =  Calculate.round2((-b + Calculate.sqrt(Calculate.discriminant(a, b, c)))/(2*a));
+			double root2 =  Calculate.round2((-b - Calculate.sqrt(Calculate.discriminant(a, b, c)))/(2*a));
+			if (root1 > root2 || root1 < root2){
+				String roots = root2 + " and " + root1;
+				return roots;
+			}
+			
+			}
+		return null;		
+	}
 	
 }
 
