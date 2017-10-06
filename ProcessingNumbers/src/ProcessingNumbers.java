@@ -24,7 +24,7 @@ public class ProcessingNumbers {
 				max = input;
 			} 
 			
-			if(max >= input || min >= input) {
+			if(max >= input && min >= input) {
 				min = input;
 			}
 			if(input % 2 == 0) {
